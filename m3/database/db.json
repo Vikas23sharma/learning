@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "name": "suraj",
+      "email": "suraj@gmail.com",
+      "password": "suraj",
+      "id": 1
+    },
+    {
+      "name": "ankush",
+      "email": "ankush@gmail.com",
+      "password": "ankush",
+      "id": 2
+    },
+    {
+      "name": "kk",
+      "email": "kk@gmail.com",
+      "password": "kk",
+      "id": 3
+    },
+    {
+      "name": "kl",
+      "email": "kl@gmail.com",
+      "password": "kl",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "password": "abc",
+      "id": 5
+    },
+    {
+      "name": "all",
+      "email": "all@gmail.com",
+      "password": "all",
+      "id": 6
+    },
+    {
+      "name": "f",
+      "email": "f",
+      "password": "f",
+      "id": 7
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

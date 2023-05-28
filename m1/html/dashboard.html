@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <title>dashboard</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Order Page</a>
+        <a href="dashboard.html">Dashboard Page</a>
+    </nav>
+    <h1>Dashboard Page</h1>
+  
+    <div>
+        <select  id="sort">
+            <option value="">sort</option>
+            <option value="asc">asc</option>
+            <option value="desc">desc</option>
+        </select>
+        <select  id="filterCoffee">
+            <option value="">Filter by Coffee</option>
+            <option value="Americano">Americano</option>
+            <option value="Expresso">Expresso</option>
+            <option value="Cappuccino">Cappuccino </option>
+        </select>
+        <select  id="filterSize">
+            <option value="">Filter by Size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+    </div>
+
+
+     <div id="table">
+        <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Coffee</th>
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>TotalPrice</th>
+            </tr>
+        </thead>
+        <tbody id ="tbody">
+
+            <!-- appending here td -->
+           
+        </tbody>
+    </table>
+    </div>
+</body>
+
+<script src="../script/dashboard.js"></script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="margin-bottom: 4%;">
+        <a href="home.html">Home</a>
+        <a href="admin.html">Admin</a>
+        <a href="hotels.html">Hotels</a>
+    </div>
+    <div>
+        <button id="logintoggle">Login</button>
+        <button id="registertoggle">Register</button>
+        <div id="register">
+            <div id="signup">
+                <label>Name :</label><input id="signupname" placeholder="Enter Name" />
+                <br />
+                <br />
+                <label>Email :</label><input id="signupemail" placeholder="Enter Email" />
+                <br />
+                <br />
+                <label>Password :</label><input id="signuppassword" placeholder="Enter Password" />
+                <br />
+                <br />
+                <button onclick="registeruser(event)">Register</button>
+            </div>
+        </div>
+        <div id="login">
+            <form id="loginbutton" style="display: none">
+                <label>Email :</label><input id="loginemail" placeholder="Enter Email" />
+                <br />
+                <br />
+                <label>Password :</label><input id="loginpassword" placeholder="Enter Password" />
+                <br />
+                <br />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="../script//home.js"></script>

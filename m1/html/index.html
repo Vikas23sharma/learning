@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/coffee.css">
+    <title>Coffee Shop</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Order Page</a>
+        <a href="dashboard.html">Dashboard Page</a>
+    </nav>
+    <div>
+        <h1>Order Page</h1>
+        <form>
+              <label>
+                 Name:<input type="text" id="customerName" class="coffee"/>
+              </label>
+              <br>
+              <br>
+              <label>
+                Coffee Type:<select id="coffeeType" class="coffee">
+                    <option value="Americano">Americano</option>
+                    <option value="Expresso">Expresso</option>
+                    <option value="Cappuccino">Cappuccino </option>
+                </select>
+              </label>
+              <br>
+              <br>
+            <label>
+                Size: <select id="size" class="coffee">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large </option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <label >
+                Quantity<input type="number" name="quantity" id="quantity" class="coffee">
+            </label>
+            <br>
+            <br>
+            <button>Order</button>
+        </form>
+    </div>
+</body>
+
+</html>
+<script src="../script/coffee.js"></script>
