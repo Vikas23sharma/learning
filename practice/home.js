@@ -10,7 +10,7 @@ but.addEventListener("click",()=>{
 
     const prom=new Promise((res,rej)=>{
         if(val%2==0){
-            res(val)
+            res("Number is Even Stevens")
         }
         else{
             let err=new Error("Number is Odd")
