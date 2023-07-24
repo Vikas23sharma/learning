@@ -1,18 +1,21 @@
 import React, { useState } from 'react'
 
-const Todoinput = ({status}) => {
+const Todoinput = ({ status,todos,setTodos }) => {
     const [text, setText] = useState("")
-   
-    let todos = JSON.parse(localStorage.getItem("todos")) || []
+
+
+    // 
 
     const handleAddTodo = () => {
+        // console.log(status)
         const todo = {
             task: text,
             status: status
         }
         setText("")
-        todos.push(todo)
+        todos = [...todos, todo]
         localStorage.setItem("todos", JSON.stringify(todos))
+        setTodos(todos)
     }
     return (
         <div>
