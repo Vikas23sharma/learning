@@ -41,6 +41,40 @@ async function Data() {
 
 Data()
 
+// converting sync function into async function
+
+function doSomeSynchronousOperation(){
+    return 2
+}
+
+function synchronousFunction() {
+    const result =doSomeSynchronousOperation();
+    return result;
+  }
+  
+  // Asynchronous function (after conversion)
+  async function asynchronousFunction() {
+    return new Promise((resolve, reject) => {
+      try {
+        const result = doSomeSynchronousOperation();
+        resolve(result); // Resolve the Promise with the result
+      } catch (error) {
+        reject(error); // Reject the Promise if an error occurs
+      }
+    });
+  }
+
+  const ans=async ()=>{
+    try {
+        let x=await asynchronousFunction()
+        console.log(x)
+    } catch (error) {
+        console.log(error)
+    }
+  } 
+  
+  ans()
+
 
 
 
