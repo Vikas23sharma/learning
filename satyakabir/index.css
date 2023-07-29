@@ -130,5 +130,10 @@
  }
 
  #cont {
-     display: block;
+     display: none;
+ }
+
+ #cont::backdrop{
+    backdrop-filter: blur(20px);
+    background-color: rgba(241, 9, 9, 0.4)
  }
