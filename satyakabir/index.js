@@ -7,3 +7,12 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+
+const bike=document.getElementById("jawa")
+const btn=document.getElementById("btn")
+const cont=document.getElementById("cont")
+
+btn.addEventListener("click",function(){
+     cont.setAttribute("border","1px solid red")
+     console.log(1)
+})
