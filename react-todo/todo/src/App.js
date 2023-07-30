@@ -5,9 +5,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todo</h1>
-      <input />
-      <button>Add Task</button>
+      <h1>React App</h1>
+      
     </div>
   );
 }
