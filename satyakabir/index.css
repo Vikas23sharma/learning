@@ -131,9 +131,10 @@
 
  #cont {
      display: none;
+     background-color: rgb(139, 144, 144);
  }
 
  #cont::backdrop{
-    backdrop-filter: blur(20px);
-    background-color: rgba(241, 9, 9, 0.4)
+    backdrop-filter: blur(2px);
+    background-color: rgba(218, 0, 0, 0.4)
  }
