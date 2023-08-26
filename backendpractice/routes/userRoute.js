@@ -26,9 +26,9 @@ userRouter.post("/add", async (req, res) => {
 //get users
 
 userRouter.get("/", async (req, res) => {
-    const query = req.query
+    // const query = req.query
     try {
-        const users = userModel.find(query)
+        const users = await userModel.find()
         res.send(users)
     } catch (error) {
         console.log(error.message)
@@ -40,7 +40,7 @@ userRouter.get("/", async (req, res) => {
 userRouter.patch("/update/:id", async (req, res) => {
     const id = req.params.id
     try {
-        await userModel.findByIdAndUpdate({_id:id},req.body)
+        await userModel.findByIdAndUpdate({ _id: id }, req.body)
         res.send("user updated successfully")
     } catch (error) {
         console.log(error.message)
@@ -52,7 +52,7 @@ userRouter.patch("/update/:id", async (req, res) => {
 userRouter.delete("/delete/:id", async (req, res) => {
     const id = req.params.id
     try {
-        await userModel.findByIdAndDelete({_id:id})
+        await userModel.findByIdAndDelete({ _id: id })
         res.send("user deleted successfully")
     } catch (error) {
         console.log(error.message)
