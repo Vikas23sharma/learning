@@ -26,9 +26,9 @@ userRouter.post("/add", async (req, res) => {
 //get users
 
 userRouter.get("/", async (req, res) => {
-    // const query = req.query
+    const query = req.query
     try {
-        const users = await userModel.find()
+        const users = await userModel.find({ age: { $gt: query.age } })
         res.send(users)
     } catch (error) {
         console.log(error.message)

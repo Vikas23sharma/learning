@@ -5,6 +5,7 @@ const userSchema = mongoose.Schema({
     surname: { type: String, required: true },
     age: { type: Number, required: true },
     graduate: { type: Boolean, required: true },
+    stack: { type: String, required: false }
 }, {
     versionKey: false
 })
