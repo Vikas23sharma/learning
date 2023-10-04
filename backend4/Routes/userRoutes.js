@@ -1,6 +1,8 @@
 const express = require("express")
 const { userModel } = require("../Models/userModel")
 const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
+const { Authmiddleware } = require("../Middleware/Authmiddleware")
 
 const userRouter = express.Router()
 
@@ -30,6 +32,53 @@ userRouter.post("/register", async (req, res) => {
         res.status(400).send({ message: error.message })
     }
 
+})
+
+//User Login
+
+userRouter.post("/login", async (req, res) => {
+    const { email, password } = req.body
+    try {
+        const user = await userModel.findOne({ email })
+
+        if (!user) {
+            res.status(400).send({ message: "User not found!" })
+        }
+        else {
+            bcrypt.compare(password, user.password, function (err, result) {
+                if (err) {
+                    res.status(400).send({ message: err.message })
+                }
+                else if (result) {
+                    const token = jwt.sign({
+                        data: {
+                            user: user.name,
+                            userid: user._id,
+                            role: "user"
+                        }
+                    }, 'secret', { expiresIn: '2h' });
+                    res.status(200).send({ message: "User Login Successful", token, user: user.name })
+                }
+                else {
+                    res.status(200).send({ message: "Incorrect Password!" })
+                }
+            });
+        }
+    } catch (error) {
+        res.status(400).send({ message: error.message })
+    }
+})
+
+
+// get all users
+userRouter.get("/allusers", Authmiddleware, async (req, res) => {
+    if (req.body.role === "admin") {
+        const users = await userModel.find()
+        res.status(200).send(users)
+    }
+    else {
+        res.status(200).send({ message: "Action not allowed!" })
+    }
 })
 
 module.exports = { userRouter }
