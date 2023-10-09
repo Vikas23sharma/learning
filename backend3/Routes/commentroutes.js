@@ -20,12 +20,15 @@ commentroute.post("/:postid/addcomment", Authmiddleware, async (req, res) => {
     }
 })
 
-commentroute.post("/:commentid/deletecomment", Authmiddleware, async (req, res) => {
-    const { commentid } = req.params
+commentroute.post("/:postid/:commentid/deletecomment", Authmiddleware, async (req, res) => {
+    const { postid, commentid } = req.params
+    // const {}
 
     try {
         const deletecomment = await commentmodel.findByIdAndDelete({ _id: commentid })
-        res.status(200).send({ message: "Comment deleted successfully" })
+
+        const updatedPost = await postmodel.findByIdAndUpdate({ _id: postid }, { $pull: { comments: deletecomment._id } }, { new: true }).populate("comments")
+        res.status(200).send({ post: updatedPost, message: "Comment deleted successfully" })
     } catch (error) {
         res.status(400).send({ message: error })
     }
