@@ -22,10 +22,8 @@ postRouter.get("/allposts", Authmiddleware, async (req, res) => {
     // console.log(req)
     try {
         const posts = await postmodel.find({ userid: req.body.userid }).populate("likes").populate("comments");
-        // .populate("likes").populate("comments").exec()
         res.status(200).send({ message: posts })
     } catch (error) {
-        // res.status(400).send({ message: "Error Fetching Posts" })
         res.status(400).send({ message: error })
 
     }
