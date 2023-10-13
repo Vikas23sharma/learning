@@ -16,13 +16,11 @@ commentroute.post("/:postid/addcomment", Authmiddleware, async (req, res) => {
     } catch (error) {
         res.status(400).send(error)
         console.log(error)
-        // res.status(400).send({ message: "Error while commenting on post" })
     }
 })
 
 commentroute.post("/:postid/:commentid/deletecomment", Authmiddleware, async (req, res) => {
     const { postid, commentid } = req.params
-    // const {}
 
     try {
         const deletecomment = await commentmodel.findByIdAndDelete({ _id: commentid })

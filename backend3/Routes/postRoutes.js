@@ -19,7 +19,6 @@ postRouter.post("/newpost", Authmiddleware, async (req, res) => {
 })
 
 postRouter.get("/allposts", Authmiddleware, async (req, res) => {
-    // console.log(req)
     try {
         const posts = await postmodel.find({ userid: req.body.userid }).populate("likes").populate("comments");
         res.status(200).send({ message: posts })
