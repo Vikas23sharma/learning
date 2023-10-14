@@ -1,0 +1,142 @@
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#navbar div {
+    font-size: 23px;
+}
+
+#heroimage {
+    width: 100%;
+    height: 80%;
+    z-index: 1;
+    margin: 0%;
+}
+
+#gradientdiv {
+    width: 100%;
+    margin: auto;
+    margin-top: -1%;
+    background-image: -moz-linear-gradient(to right, #ff66c4, #ffdd5a);
+    background-image: linear-gradient(to right, #ff66c4, #ffdd5a);
+    text-align: center;
+    padding-top: 4%;
+    height: 800px;
+}
+
+#order {
+    font-family: sans-serif;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-size: 45px;
+    color: white;
+    letter-spacing: 6px;
+}
+
+#foodcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    background-image: -moz-linear-gradient(to right, #ff66c4, #ffdd5a);
+    background-image: linear-gradient(to right, #ff66c4, #ffdd5a);
+}
+
+.food {
+    width: 15%;
+    background-color: white;
+    padding: 1.5%;
+    padding-bottom: 0%;
+    height: 380px;
+    text-align: center;
+    border-top-right-radius: 67px;
+    border-bottom-left-radius: 77px;
+}
+
+.foodimgcontainer {
+    width: 100%;
+    height: 60%;
+    margin: auto;
+}
+
+.food img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 54px;
+    object-fit: cover;
+}
+
+#orderbtn {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 5%;
+    padding: 1% 4%;
+    border-radius: 45px;
+    background-color: #ffcbb8;
+    border: 0px;
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+    .food {
+        width: 20%;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .food {
+        width: 25%;
+    }
+}
+
+@media (max-width: 767px) {
+    #gradientdiv {
+        height: 1650px;
+    }
+
+    #foodcontainer {
+        flex-direction: column;
+    }
+
+    .food {
+        width: 40%;
+        margin-left: 5%;
+        margin-bottom: 3%;
+    }
+
+    #zigzag {
+        margin-left: 51%;
+    }
+}
+
+@media (max-width: 567px) {
+    .food {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 5%;
+        padding: 3%;
+        padding-bottom: 0%;
+        height: 450px;
+}
+
+    #zigzag {
+        margin-left: 18%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    #heroimage{
+        width: 100%;
+    }
+
+    .food {
+        width: 80%;
+        height: 480px;
+    }
+
+    #zigzag {
+        margin-left: 8%;
+    }
+}
