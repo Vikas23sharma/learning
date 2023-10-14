@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simplotel</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
+    <div id="hamburger">
+        <img id="hamimage"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
+            alt="">
+    </div>
     <div id="navbar">
-        <div>Home</div>
-        <div>Order</div>
-        <div>Food</div>
-        <div>Restaurant</div>
-        <div>Testimonials</div>
-        <div>Contact Us</div>
-        <i style="font-size:24px" class="fa">&#xf07a;</i>
+        <div class="navmenu">Home</div>
+        <div class="navmenu">Order</div>
+        <div class="navmenu">Food</div>
+        <div class="navmenu">Restaurant</div>
+        <div class="navmenu">Testimonials</div>
+        <div class="navmenu">Contact Us</div>
+        <div class="navmenu">
+            <i style="font-size:24px" class="fa-regular fa-circle-phone">&#xe11b;</i>
+            <i style="font-size:24px" class="fa">&#xf07a;</i>
+        </div>
     </div>
 
     <img id="heroimage" src="assests\img1.jpg" alt="heroimage">
-
     <div id="gradientdiv">
         <h1 id="order">Order Now</h1>
         <div id="foodcontainer">
@@ -29,15 +37,15 @@
                     <img src="assests\img4.jpg" alt="">
                 </div>
                 <h1>BURGER</h1>
-                <p>Lorem Ipsum has been the 
+                <p>Lorem Ipsum has been the
                     industry's standard dummy text</p>
             </div>
             <div id="zigzag" class="food">
-                <div  class="foodimgcontainer">
+                <div class="foodimgcontainer">
                     <img src="assests\img2.jpg" alt="">
                 </div>
                 <h1>PIZZA</h1>
-                <p>Lorem Ipsum has been the 
+                <p>Lorem Ipsum has been the
                     industry's standard dummy text</p>
             </div>
             <div class="food">
@@ -45,12 +53,27 @@
                     <img src="assests\img3.jpg" alt="">
                 </div>
                 <h1>PASTA</h1>
-                <p>Lorem Ipsum has been the 
+                <p>Lorem Ipsum has been the
                     industry's standard dummy text</p>
             </div>
         </div>
         <button id="orderbtn">Order</button>
     </div>
 </body>
+<script>
+    const navbar = document.getElementById("navbar")
+    const ham = document.getElementById("hamburger")
+    let open = true
+    ham.addEventListener("click", () => {
+        
+        if (open) {
+            navbar.style.display = "flex"
+        }
+        else {
+            navbar.style.display = "none"
+        }
+        open = !open
+    })
+</script>
 
 </html>

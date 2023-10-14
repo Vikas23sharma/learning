@@ -9,6 +9,14 @@
     font-size: 23px;
 }
 
+.navmenu {
+    letter-spacing: 3px;
+}
+
+#hamburger {
+    display: none;
+}
+
 #heroimage {
     width: 100%;
     height: 80%;
@@ -85,12 +93,50 @@
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    #navbar {
+        display: flex;
+    }
+
     .food {
         width: 25%;
+    }
+
+    .navmenu {
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 }
 
 @media (max-width: 767px) {
+    #navbar {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        margin-top: 0%;
+        background-image: -moz-linear-gradient(to right, #ff66c4, #ffdd5a);
+        background-image: linear-gradient(to right, #ff66c4, #ffdd5a);
+        flex-direction: column;
+        margin-bottom: 3%;
+        z-index: 10;
+    }
+
+    .navmenu{
+        margin: auto;
+        cursor: pointer;
+    }
+
+    #hamburger {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    #hamimage {
+        width: 50px;
+        height: 50px;
+    }
+
     #gradientdiv {
         height: 1650px;
     }
@@ -111,14 +157,29 @@
 }
 
 @media (max-width: 567px) {
+    #navbar{
+        height: 250px;
+    }
     .food {
-        width: 60%;
+        width: 55%;
         margin: auto;
         margin-bottom: 5%;
         padding: 3%;
         padding-bottom: 0%;
-        height: 450px;
-}
+        height: 380px;
+    }
+
+    .foodimgcontainer {
+        height: 70%;
+    }
+
+    .food h1 {
+        font-size: 20px;
+    }
+
+    .food p {
+        margin-bottom: 0%;
+    }
 
     #zigzag {
         margin-left: 18%;
@@ -127,13 +188,26 @@
 
 @media (max-width: 450px) {
 
-    #heroimage{
+    #navbar{
+        height: 200px;
+    }
+
+    #heroimage {
         width: 100%;
+    }
+
+    #navbar div{
+        font-size: 18px;
+    }
+
+    #order{
+        margin-top: 10%;
     }
 
     .food {
         width: 80%;
-        height: 480px;
+        height: 380px;
+        margin-bottom: 12%;
     }
 
     #zigzag {
