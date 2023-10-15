@@ -35,6 +35,94 @@
     margin-bottom: 5%;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /* background-color: #e10d0d; */
+    /* color: #fff; */
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+ul.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+ul.navbar li {
+    list-style: none;
+}
+
+ul.navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    /* color: #fff; */
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    align-items: flex-start;
+}
+
+/* Media query to show/hide the hamburger menu */
+@media (max-width: 767px) {
+    ul.navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        /* text-align: center; */
+        height: 300px;
+        padding: 20px;
+        z-index: 2;
+        background-image: -moz-linear-gradient(to right, #ff66c4, #ffdd5a);
+        background-image: linear-gradient(to right, #ff66c4, #ffdd5a);
+    }
+
+    ul.navbar li{
+        margin-bottom: 2%;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: -100%;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Styles for the "X" icon when menu is active */
+    #menu-toggle:checked+label.menu-icon::after {
+        content: '\2715';
+    }
+
+    /* Show the menu when the checkbox is checked */
+    #menu-toggle:checked+label.menu-icon+ul.navbar {
+        display: flex;
+    }
+}
+
 #herosection {
     position: relative;
 }
@@ -252,6 +340,11 @@
 }
 
 @media (max-width: 567px) {
+
+    ul.navbar{
+        height: 250px;
+    }
+
     #navbar {
         height: 250px;
     }
@@ -298,6 +391,10 @@
 }
 
 @media (max-width: 450px) {
+
+    ul.navbar{
+        height: 220px;
+    }
 
     #navbar {
         height: 200px;

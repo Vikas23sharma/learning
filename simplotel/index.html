@@ -10,12 +10,12 @@
 </head>
 
 <body>
-    <div id="hamburger">
+    <!-- <div id="hamburger">
         <img id="hamimage"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png"
             alt="">
-    </div>
-    <div id="navbar">
+    </div> -->
+    <!-- <div id="navbar">
         <div class="navmenu">Home</div>
         <div class="navmenu">Order</div>
         <div class="navmenu">Food</div>
@@ -23,19 +23,37 @@
         <div class="navmenu">Testimonials</div>
         <div class="navmenu">Contact Us</div>
         <div id="iconcont" class="navmenu">
-            <!-- <i style="font-size:24px" class="fa-regular fa-circle-phone">&#xe11b;</i> -->
+            <i style="font-size:24px" class="fa-regular fa-circle-phone">&#xe11b;</i>
             <img id="phoneimage" src="assests\281830_phone_circle_mobile_communication_call_icon.png" alt="">
             <i style="font-size:24px" class="fa">&#xf07a;</i>
         </div>
-    </div>
+    </div> -->
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Restaurant</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li>
+                <a href="#"><i class="fas fa-phone"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+            <!-- <li><a href="#"><i class="fas fa-phone"></i></a></li> -->
+        </ul>
+    </nav>
     <div id="herosection">
         <div id="overlay">
             <h1>LOREM IPSUM</h1>
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
         <img id="heroimage" src="assests\img1.jpg" alt="heroimage">
     </div>
-    
+
     <div id="gradientdiv">
         <h1 id="order">Order Now</h1>
         <div id="foodcontainer">
@@ -67,35 +85,4 @@
         <button id="orderbtn">Order</button>
     </div>
 </body>
-<script>
-    const navbar = document.getElementById("navbar")
-    const ham = document.getElementById("hamburger")
-    let open = true
-    let click = 0
-
-    function restorenav() {
-        navbar.style.display = "flex"
-    }
-
-    ham.addEventListener("click", () => {
-        if (open) {
-            navbar.style.display = "flex"
-        }
-        else {
-            navbar.style.display = "none"
-        }
-        open = !open
-    })
-
-    // window.addEventListener("resize", () => {
-    //   if(window.innerWidth>=768){
-    //     window.location.reload()
-    //   }
-    // })
-
-
-
-
-</script>
-
 </html>
