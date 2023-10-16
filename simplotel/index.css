@@ -247,9 +247,9 @@ ul.navbar li a {
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    #navbar {
+    /* #navbar {
         display: flex;
-    }
+    } */
 
     #overlay {
         height: 130px;
@@ -345,9 +345,9 @@ ul.navbar li a {
         height: 250px;
     }
 
-    #navbar {
+    /* #navbar {
         height: 250px;
-    }
+    } */
 
     #overlay {
         height: 115px;
