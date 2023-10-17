@@ -1,4 +1,4 @@
-#navbar {
+/* #navbar {
     display: flex;
     justify-content: space-evenly;
     margin-top: 1%;
@@ -7,7 +7,7 @@
 
 #navbar div {
     font-size: 23px;
-}
+} */
 
 .navmenu {
     letter-spacing: 3px;
@@ -276,7 +276,7 @@ ul.navbar li a {
 }
 
 @media (max-width: 767px) {
-    #navbar {
+    /* #navbar {
         display: none;
         position: absolute;
         width: 100%;
@@ -287,7 +287,7 @@ ul.navbar li a {
         flex-direction: column;
         margin-bottom: 3%;
         z-index: 10;
-    }
+    } */
 
     .navmenu {
         margin: auto;
@@ -396,9 +396,9 @@ ul.navbar li a {
         height: 220px;
     }
 
-    #navbar {
+    /* #navbar {
         height: 200px;
-    }
+    } */
 
     #overlay {
         top: 33%;
@@ -421,9 +421,9 @@ ul.navbar li a {
         width: 100%;
     }
 
-    #navbar div {
+    /* #navbar div {
         font-size: 18px;
-    }
+    } */
 
     #order {
         margin-top: 10%;
