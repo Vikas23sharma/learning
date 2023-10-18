@@ -316,7 +316,7 @@ nav {
 
 @media (max-width: 450px) {
 
-    ul.navbar {
+    .navbar {
         height: 220px;
     }
 
